@@ -17,6 +17,7 @@ const shotName = params.get('shot');
 const seed = Number(params.get('seed') ?? 7) || 7;
 
 let world = createWorld(seed);
+window.__gobbleWorld = world; // lets a player (or a test) peek at the run
 let paused = false;
 let lastStamp = null;
 let accumulator = 0;
